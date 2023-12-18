@@ -1,0 +1,252 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+.title{
+    margin: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+:root{
+    --white: #eee;
+    --orange: green;
+    --gradient: linear-gradient(98deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6839110644257703) 82%);
+    --grey: #555;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+.header{
+    background: var(--gradient);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rem solid var(--orange);
+}
+
+.header .logo{
+    font-size: 2rem;
+    padding: .5rem .2rem;
+    color: var(--white);
+    font-weight: bold;
+    color: var(--white);
+    background-color: green;
+    border-radius: 3px;
+}
+
+.header .navbar{
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.header .navbar a{
+    color: var(--white);
+    position: relative;
+}
+
+.header .navbar a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange);
+    transform-origin: bottom left;
+    transition: transform 0.15s ease-out;
+}
+
+.header .navbar a:hover:after{ 
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+}
+
+.header .icons{
+    color: var(--white);
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+}
+
+.header .icons i:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.login-form-container{
+    position: fixed;
+    top: -120%; left: 0;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(225, 255, 255, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container.active{
+    top: 0;
+}
+
+#form-close{
+    background-color:green;
+}
+
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+
+.login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login-form-container form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    text-transform: none;
+}
+
+.login-form-container form .box:focus{
+    border-color: green;
+}
+
+.login-form-container form #remember{
+    margin: 2rem 0;
+}
+
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+}
+
+.login-form-container form p{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.login-form-container form p a{
+    color: green;
+}
+
+.login-form-container form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-form-container #form-close{
+    position: absolute;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.swiper-wrapper img{
+    height: calc(100vh - 6rem);
+    width: 100%;
+}
+
+.about-hero{
+    padding: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items:center;
+}
+
+.about-hero .content h3{
+    font-size: 8rem;
+    color: var(--grey);
+}
+
+.about-hero .content p{
+    line-height: 2;
+    font-size: 4rem;
+    color: black;
+    margin: 1rem;
+}
+
+.news .news-hero{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+}
+
+.news .news-hero .block{
+    width: 40rem;
+    height: 40rem;
+    overflow: hidden;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.news .news-hero .block .image{
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.news .news-hero .block h3{
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.news .news-hero .block p{
+    font-size: 1.5rem;
+}
+
+.blum-furneture .furneture-hero{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.blum-furneture .furneture-hero .block .image{
+    display: flex;
+    justify-content: center;
+    width: 60rem;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.blum-furneture .furneture-hero .block .content{
+    text-align: center;
+}
+
